@@ -26,4 +26,24 @@ If someone merges your pull request or leaves a comment, GitHub will email you a
 
 If your pull request would result in a merge conflict, and you're not sure how to resolve it, see the next video for instructions.
 
- Previous
+LESSION THREE ADDS-ON
+~~~~~~~~~~~~~~~~~~
+// After adding remote - 
+
+macpro (master) VCReflection $ git remote add MURARI https://github.com/PalpaDhading/VersionControl
+macpro (master) VCReflection $ git remote
+MURARI
+macpro (master) VCReflection $ git remote -v
+MURARI	https://github.com/PalpaDhading/VersionControl (fetch)
+MURARI	https://github.com/PalpaDhading/VersionControl (push)
+macpro (master) VCReflection $ 
+// Git push takes two arguments  - one is remote name and second is the local branch 
+macpro (master) VCReflection $ git push MURARI master
+// Steps
+fork
+fetch
+pull request
+fast-forward merge
+ 
+ 
+ 
