@@ -174,3 +174,32 @@ drwxr-xr-x  14 macpro  staff   476 Jan 23 08:59 .git
 -rw-r--r--   1 macpro  staff    44 Jan 23 08:58 Tfile1.txt
 macpro ((7cef5d5...) *) versioncontrol $ 
 // LESSION TWO UPDATE
+
+LESSION TWO ADDS-ON
+~~~~~~~~~~~~~~~~~~~~
+
+// FORKING > it goes on github repository 
+// CLONE > github to local 
+macpro (master) VCreflection $ git clone https://github.com/PalpaDhading/VersionControl.git
+Cloning into 'VersionControl'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 14 (delta 2), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+Checking connectivity... done.
+macpro (master) VCreflection $ 
+// Verification of FORK on remote
+macpro (master) VCreflection $ git remote -v
+MURARI	https://github.com/PalpaDhading/VersionControl (fetch)
+MURARI	https://github.com/PalpaDhading/VersionControl (push)
+macpro (master) VCreflection $ 
+
+// create a branch like modlession
+
+macpro (master) versioncontrol $ git branch modlession
+// switch to new branch
+macpro (master) versioncontrol $ git checkout modlession
+Switched to branch 'modlession'
+macpro (modlession) versioncontrol $ 
+
+// Merging with remote MURARI
