@@ -1,0 +1,226 @@
+LESSION TWO:
+
+macpro ((2c52002...) *) versioncontrol $ ls -a
+.				.git				Version Cont Lesson1.txt
+..				Version Cont Lesson 2 .txt	git pull.tiff
+.DS_Store			Version Cont Lesson 3.txt
+macpro ((2c52002...) *) versioncontrol $ git diff
+diff --git a/Tfile1.txt b/Tfile1.txt
+deleted file mode 100644
+index 0da22d4..0000000
+--- a/Tfile1.txt
++++ /dev/null
+@@ -1,6 +0,0 @@
+-select 
+-name,
+-address,
+-phone,
+-school,
+- from Upasana
+diff --git a/Tfile2.txt b/Tfile2.txt
+deleted file mode 100644
+index b90d200..0000000
+--- a/Tfile2.txt
++++ /dev/null
+@@ -1,3 +0,0 @@
+-select 
+-*
+- from Upasana
+macpro ((2c52002...) *) versioncontrol $ git commit
+HEAD detached at 2c52002
+Changes not staged for commit:
+	deleted:    Tfile1.txt
+	deleted:    Tfile2.txt
+
+Untracked files:
+	Version Cont Lesson 2 .txt
+	Version Cont Lesson 3.txt
+	Version Cont Lesson1.txt
+	git pull.tiff
+
+no changes added to commit
+macpro ((2c52002...) *) versioncontrol $ git add git pull.tiff
+fatal: pathspec 'git' did not match any files
+macpro ((2c52002...) *) versioncontrol $ git add Version Cont Lesson1.txt
+fatal: pathspec 'Version' did not match any files
+macpro ((2c52002...) *) versioncontrol $ Version Cont Lesson1.txt
+-bash: Version: command not found
+macpro ((2c52002...) *) versioncontrol $ git add Version Cont Lesson1.txt
+fatal: pathspec 'Version' did not match any files
+macpro ((2c52002...) *) versioncontrol $ ls
+Version_Cont_Lesson1.txt	Version_Cont_Lesson3.txt
+Version_Cont_Lesson2.txt	git pull.tiff
+macpro ((2c52002...) *) versioncontrol $ ls
+Map_pull.tiff			Version_Cont_Lesson2.txt
+Version_Cont_Lesson1.txt	Version_Cont_Lesson3.txt
+macpro ((2c52002...) *) versioncontrol $ git add Version_Cont_Lesson3.txt
+macpro ((2c52002...) *+) versioncontrol $ git add Version_Cont_Lesson2.txt
+macpro ((2c52002...) *+) versioncontrol $ git add Version_Cont_Lesson1.txt
+macpro ((2c52002...) *+) versioncontrol $ git add Map_pull.tiff
+macpro ((2c52002...) *+) versioncontrol $ commit
+-bash: commit: command not found
+macpro ((2c52002...) *+) versioncontrol $ git commit
+[detached HEAD 5327b75] Three Version control classes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Committer: MacPro <macpro@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 563 insertions(+)
+ create mode 100644 Map_pull.tiff
+ create mode 100644 Version_Cont_Lesson1.txt
+ create mode 100644 Version_Cont_Lesson2.txt
+ create mode 100644 Version_Cont_Lesson3.txt
+macpro ((5327b75...) *) versioncontrol $ git diff
+diff --git a/Tfile1.txt b/Tfile1.txt
+deleted file mode 100644
+index 0da22d4..0000000
+--- a/Tfile1.txt
++++ /dev/null
+@@ -1,6 +0,0 @@
+-select 
+-name,
+-address,
+-phone,
+-school,
+- from Upasana
+diff --git a/Tfile2.txt b/Tfile2.txt
+deleted file mode 100644
+index b90d200..0000000
+--- a/Tfile2.txt
++++ /dev/null
+@@ -1,3 +0,0 @@
+-select 
+-*
+- from Upasana
+macpro ((5327b75...) *) versioncontrol $ git diff --staged
+macpro ((5327b75...) *) versioncontrol $ git master
+D	Tfile2.txt
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  5327b75 Three Version control classes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 5327b75
+
+Switched to branch 'master'
+macpro (master *) versioncontrol $ git commit
+On branch master
+Changes not staged for commit:
+	deleted:    Tfile2.txt
+
+no changes added to commit
+macpro (master *) versioncontrol $ git delete Tfile2.txt
+git: 'delete' is not a git command. See 'git --help'.
+macpro (master *) versioncontrol $ git diff
+diff --git a/Tfile2.txt b/Tfile2.txt
+deleted file mode 100644
+index b90d200..0000000
+--- a/Tfile2.txt
++++ /dev/null
+@@ -1,3 +0,0 @@
+-select 
+-*
+- from Upasana
+macpro (master *) versioncontrol $ git commit
+On branch master
+Changes not staged for commit:
+	deleted:    Tfile2.txt
+
+no changes added to commit
+macpro (master *) versioncontrol $ git diff --staged
+macpro (master *) versioncontrol $ git remote add https://github.com/PalpaDhading/VersionControl.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+macpro (master *) versioncontrol $ ls -la
+total 24
+drwxr-xr-x   5 macpro  staff   170 Jan 23 08:31 .
+drwxr-xr-x+ 34 macpro  staff  1156 Jan 23 08:22 ..
+-rw-r--r--@  1 macpro  staff  6148 Jan 23 08:22 .DS_Store
+drwxr-xr-x  14 macpro  staff   476 Jan 23 08:32 .git
+-rw-r--r--   1 macpro  staff   128 Jan 23 08:31 Tfile1.txt
+macpro (master *) versioncontrol $ ls -a
+.		..		.DS_Store	.git		Tfile1.txt
+macpro (master *) versioncontrol $ git remove Tfile1.txt
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+macpro (master *) versioncontrol $ macpro (master *) versioncontrol $ git remove 
+-bash: syntax error near unexpected token `master'
+macpro (master *) versioncontrol $ git delete Tfile1.txt
+git: 'delete' is not a git command. See 'git --help'.
+macpro (master *) versioncontrol $ cd ~
+macpro ~ $ cd versioncontrol
+macpro (master *) versioncontrol $ git log
+commit 0d91a0ae920f13a1b9c7d054feeb3bd6aea0925c
+Author: MacPro <macpro@Mac-acbc32aa1ed1.local>
+Date:   Sun Jan 17 09:04:11 2016 -0500
+
+    Added Unin with Murari
+
+commit 2c5200267a2a14228d18c78312126a022b5317a9
+Author: MacPro <macpro@Mac-acbc32aa1ed1.local>
+Date:   Sun Jan 17 08:56:15 2016 -0500
+
+    2nd commit
+
+commit 7cef5d563f9a7817e35607b60c68e9a2e5aed8df
+Author: MacPro <macpro@Mac-acbc32aa1ed1.local>
+Date:   Sun Jan 17 08:34:56 2016 -0500
+
+    First commit
+macpro (master *) versioncontrol $ git checkout 7cef5d563f9a7817e35607b60c68e9a2e5aed8df
+D	Tfile2.txt
+Note: checking out '7cef5d563f9a7817e35607b60c68e9a2e5aed8df'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 7cef5d5... First commit
+macpro ((7cef5d5...) *) versioncontrol $ ls -la
+total 24
+drwxr-xr-x   5 macpro  staff   170 Jan 23 08:58 .
+drwxr-xr-x+ 34 macpro  staff  1156 Jan 23 08:57 ..
+-rw-r--r--@  1 macpro  staff  6148 Jan 23 08:22 .DS_Store
+drwxr-xr-x  14 macpro  staff   476 Jan 23 08:58 .git
+-rw-r--r--   1 macpro  staff    44 Jan 23 08:58 Tfile1.txt
+macpro ((7cef5d5...) *) versioncontrol $ git commit
+HEAD detached at 7cef5d5
+Changes not staged for commit:
+	deleted:    Tfile2.txt
+
+no changes added to commit
+macpro ((7cef5d5...) *) versioncontrol $ ls -la
+total 24
+drwxr-xr-x   5 macpro  staff   170 Jan 23 08:58 .
+drwxr-xr-x+ 34 macpro  staff  1156 Jan 23 08:57 ..
+-rw-r--r--@  1 macpro  staff  6148 Jan 23 08:22 .DS_Store
+drwxr-xr-x  14 macpro  staff   476 Jan 23 08:59 .git
+-rw-r--r--   1 macpro  staff    44 Jan 23 08:58 Tfile1.txt
+macpro ((7cef5d5...) *) versioncontrol $ 

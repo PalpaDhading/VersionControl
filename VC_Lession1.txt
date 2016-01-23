@@ -1,0 +1,21 @@
+LESSION ONE:
+TO CREATE AND UPLOAD REPOSITORY 
+1) visit github - >https://github.com/PalpaDhading
+2) create Repository form + sign
+3) git remote add <origin or anyname > <URL name - https://github.com/PalpaDhading/VersionControl.git>
+//
+create a new repository on the command line
+
+
+echo "# VersionControl" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/PalpaDhading/VersionControl.git
+git push -u origin master
+
+//push an existing repository from the command line
+
+
+git remote add origin https://github.com/PalpaDhading/VersionControl.git
+git push -u origin master
